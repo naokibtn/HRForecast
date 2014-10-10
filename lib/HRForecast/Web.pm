@@ -743,8 +743,8 @@ post '/api/:service_name/:section_name/:graph_name' => sub {
     my $result = $c->req->validator([
         'number' => {
             rule => [
-                ['NOT_NULL','number is null'],
-                ['INT','number is not int']
+                ['NOT_NULL','number is null']
+#                ['INT','number is not null']
             ],
         },
         'datetime' => {
